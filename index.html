@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Festival XYZ</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trivia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
@@ -17,20 +16,36 @@
       }
     }
   </script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen font-sans">
-  <main class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
-    <h2 class="text-2xl font-semibold text-center mb-6">¡Bienvenido al festival XYZ!</h2>
-    <div class="grid grid-cols-2 gap-x-4 gap-y-3">
-      <div class="font-medium text-gray-700">Nombre del reto</div>
-      <div class="text-gray-900">Trivia</div>
-      <div class="font-medium text-gray-700">Descripción</div>
-      <div class="text-gray-900">Seleccione la respuesta correcta</div>
-      <div class="font-medium text-gray-700">Duración</div>
-      <div class="text-gray-900">10 minutos</div>
-      <div class="font-medium text-gray-700">Puntos a acumular</div>
-      <div class="text-gray-900">100 pts</div>
+
+  <div class="container mx-auto px-4">
+    <div class="trivia-card bg-white rounded-2xl shadow-lg p-6 max-w-md mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-4">TRIVIA</h2>
+      <p class="text-center text-gray-600 mb-6">Seleccione solo una respuesta por pregunta.</p>
+      
+      <form>
+        <div class="question mb-6">
+          <p class="font-semibold mb-3"><strong>1.</strong> ¿Qué tipo de contenedor se usa para los residuos orgánicos?</p>
+          <label class="flex items-center mb-2 cursor-pointer">
+            <input type="radio" name="respuesta1" class="form-radio text-green-500 mr-3" />
+            Contenedor azul.
+          </label>
+          <label class="flex items-center mb-2 cursor-pointer">
+            <input type="radio" name="respuesta1" class="form-radio text-green-500 mr-3" />
+            Contenedor amarillo.
+          </label>
+          <label class="flex items-center cursor-pointer">
+            <input type="radio" name="respuesta1" class="form-radio text-green-500 mr-3" />
+            Contenedor verde.
+          </label>
+        </div>
+        <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded-lg transition">
+          Siguiente
+        </button>
+      </form>
     </div>
-  </main>
+  </div>
 </body>
 </html>
